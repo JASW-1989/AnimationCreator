@@ -1,0 +1,22 @@
+{
+  "id": "clipshelf",
+  "name": "Clip Shelf",
+  "version": "0.2.0",
+  "offline": true,
+  "network": false,
+  "capabilities": [
+    "capture",
+    "retime",
+    "repeat",
+    "collision-check"
+  ],
+  "status": "builtin",
+  "manifestVersion": 1,
+  "requiresSubscription": false,
+  "requiresPaidAPI": false,
+  "trustedBuiltinOnly": true,
+  "implementation": [
+    "public/plugins.js",
+    "public/core.js"
+  ]
+}

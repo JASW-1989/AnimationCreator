@@ -1,0 +1,23 @@
+{
+  "id": "contact",
+  "name": "Contact IK",
+  "version": "0.2.0",
+  "offline": true,
+  "network": false,
+  "capabilities": [
+    "two-link-ik",
+    "world-target",
+    "ground-velocity",
+    "reach-diagnostics"
+  ],
+  "status": "builtin",
+  "scope": "Built-in cat limbs; no automatic rigging of imported art.",
+  "manifestVersion": 1,
+  "requiresSubscription": false,
+  "requiresPaidAPI": false,
+  "trustedBuiltinOnly": true,
+  "implementation": [
+    "public/plugins.js",
+    "public/core.js"
+  ]
+}

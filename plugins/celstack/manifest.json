@@ -1,0 +1,22 @@
+{
+  "id": "celstack",
+  "name": "Cel Stack",
+  "version": "0.2.0",
+  "offline": true,
+  "network": false,
+  "capabilities": [
+    "raster-cel-library",
+    "exposure-ranges",
+    "repeat",
+    "blank-cels"
+  ],
+  "status": "builtin",
+  "manifestVersion": 1,
+  "requiresSubscription": false,
+  "requiresPaidAPI": false,
+  "trustedBuiltinOnly": true,
+  "implementation": [
+    "public/plugins.js",
+    "public/core.js"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "vault",
+  "name": "Local Vault",
+  "version": "0.2.0",
+  "offline": true,
+  "network": false,
+  "capabilities": [
+    "persistent-undo-redo",
+    "checkpoints",
+    "checksum-backup"
+  ],
+  "status": "builtin",
+  "manifestVersion": 1,
+  "requiresSubscription": false,
+  "requiresPaidAPI": false,
+  "trustedBuiltinOnly": true,
+  "implementation": [
+    "public/vault.js",
+    "lib/store.cjs"
+  ]
+}
