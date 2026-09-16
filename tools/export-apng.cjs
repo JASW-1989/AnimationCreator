@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+/* Assemble an extracted Koma PNG ZIP (manifest.json + frames/0000.png). No dependencies. */
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),A=require('../public/apng.js');
+try{const [dir,out]=process.argv.slice(2);if(!dir||!out)throw new Error('Usage: node tools/export-apng.cjs EXTRACTED_PNG_DIRECTORY NEW_OUTPUT.apng');if(fs.existsSync(out))throw new Error('Output exists; choose a new file');const root=path.resolve(dir),m=JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));if(!Number.isInteger(m.frames)||m.frames<1||m.frames>480)throw new Error('Invalid frame count');const frames=[];for(let i=0;i<m.frames;i++){const f=path.join(root,'frames',String(i).padStart(4,'0')+'.png');if(fs.statSync(f).size>12000000)throw new Error('Frame exceeds 12 MB');frames.push(new Uint8Array(fs.readFileSync(f)));}const data=A.assemble(frames,m.fps);fs.writeFileSync(out,data,{flag:'wx'});console.log(JSON.stringify({file:path.resolve(out),frames:m.frames,fps:m.fps,seconds:m.frames/m.fps,bytes:data.length,modelCalls:0}));}catch(e){console.error(e.message);process.exitCode=1;}

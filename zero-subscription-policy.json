@@ -1,0 +1,27 @@
+{
+  "version": "0.6.0-alpha",
+  "requiredSubscription": false,
+  "requiredAccount": false,
+  "requiredPaidAPI": false,
+  "runtimeNpmDependencies": 0,
+  "externalModelCalls": 0,
+  "telemetry": false,
+  "automaticDownloads": false,
+  "externalRuntimeURLs": [],
+  "bundledModels": [],
+  "optionalAgent": "External account and usage rules remain separate",
+  "pluginManifests": [
+    "plugins/vault/manifest.json",
+    "plugins/celstack/manifest.json",
+    "plugins/clipshelf/manifest.json",
+    "plugins/contact/manifest.json",
+    "plugins/renderpack/manifest.json"
+  ],
+  "featureManifest": "plugin-manifest.json",
+  "atelier": {
+    "nativeLocal": true,
+    "modelCalls": 0,
+    "externalAccountRequired": false,
+    "mcpNeedsLocalOpenBrowserForImages": true
+  }
+}
